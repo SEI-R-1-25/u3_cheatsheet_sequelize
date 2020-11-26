@@ -7,6 +7,11 @@ const getUserFavs = async () => {
   stringer(users)
 }
 
+const getMoviesAndUsers = async () => {
+  const movies = await Movie.findAll({ include: [User] })
+  stringer(movies)
+}
+
 const insertFavoriteUsingSetter = async () => {
   const user = await User.findByPk(67)
   const movie = await Movie.findOne({ order: sequelize.random() })
@@ -27,12 +32,12 @@ const insertUserFavoriteUsingIds = async () => {
   stringer(fav)
 }
 
-getUserFavs()
 async function run() {
   try {
     await getUserFavs()
     await insertFavoriteUsingSetter()
     await insertUserFavoriteUsingIds()
+    await getMoviesAndUsers()
   } catch (error) {
     console.log(error)
   } finally {
