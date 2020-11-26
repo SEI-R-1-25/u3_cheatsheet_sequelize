@@ -1,0 +1,10 @@
+{
+  "name": "queries",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.5.1",
+    "sequelize": "^6.3.5"
+  }
+}
