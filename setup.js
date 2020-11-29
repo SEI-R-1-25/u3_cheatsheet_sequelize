@@ -10,7 +10,7 @@ Promise.all(
   working_dirs.map(async (dir) => {
     try {
       await execute(
-        ` cd ${starter}/${dir} && sequelize db:create && sequelize db:migrate && sequelize db:seed:all && cd ../`
+        ` cd ${starter}/${dir} && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && cd ../`
       )
     } catch (error) {
       console.log(error)

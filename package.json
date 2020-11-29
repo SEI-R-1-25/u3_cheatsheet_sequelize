@@ -4,7 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "setup": "node setup.js"
+    "setup": "node setup.js",
+    "queries": "node ./start-here/queries-1/",
+    "associations": "node ./start-here/associations-2/",
+    "associations-complex": "node ./start-here/complex-associations-3/",
+    "model-helpers": "node ./start-here/model-helpers-4/"
   },
   "dependencies": {
     "pg": "^8.5.1",
